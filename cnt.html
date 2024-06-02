@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Số lượt truy cập trang web của bạn là: <span id="visitor-count"></span></h1>
+    <script>
+        // Gọi đến tệp PHP để lấy số lượt truy cập
+        fetch('counter.php')
+            .then(response => response.text())
+            .then(data => {
+                // Hiển thị số lượt truy cập lên trang web
+                document.getElementById('visitor-count').textContent = data;
+            });
+    </script>
+</body>
+</html>
